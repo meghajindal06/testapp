@@ -1,0 +1,15 @@
+<ion-view view-title="Accounts">
+  <ion-content>
+   
+     <div class="item card item-remove-animate item-avatar" ng-repeat="chat in chats" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
+        <img ng-src="{{chat.face}}">
+        <h2>{{chat.name}}</h2>
+         <h2 style="float: right;">$100</h2>
+        <p>{{chat.lastText}}</p>
+
+
+        
+      </div>
+
+  </ion-content>
+</ion-view>

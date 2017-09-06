@@ -1,0 +1,44 @@
+<ion-view view-title="Transfer">
+  <ion-content class="padding">
+    <div class="item card item-remove-animate item-avatar" type="item-text-wrap">
+        <img ng-src="{{chat.face}}">
+        <h2>{{chat.name}}</h2>
+         <h2 style="float: right;">$100</h2>
+        <p>{{chat.lastText}}</p>
+     </div>
+     <span class="error" ng-show="errors.amount">{{errors.amount}}</span>
+     <div class="item card" type="item-text-wrap">
+      <input type="number" placeholder="Amount" ng-model="dataObj.amount">
+     </div>
+     <div class="item card" type="item-text-wrap">
+      <ion-card-header>Recipient</ion-card-header>
+       <label class="item item-input">
+            <i class="icon ion-person placeholder-icon"></i>
+            <input type="text" placeholder="Beneficiary Name" ng-model="dataObj.name">
+          </label>
+          <span class="error" ng-show="errors.accountNumberBeneficiary">{{errors.accountNumberBeneficiary}}</span>
+           <label class="item item-input">
+            <i class="icon ion-information-circled placeholder-icon"></i>
+      <input type="text" placeholder="NL 99 BANK 0123 4567 89" ng-model="dataObj.accountNumberBeneficiary">
+      </label>
+     </div>
+     <div class="item card" type="item-text-wrap">
+      <ion-card-header>Details</ion-card-header>
+       <label class="item item-input">
+            <i class="icon ion-ios-camera placeholder-icon"></i>
+      <input type="text" placeholder="Payment Reference (acceptgiro)" ng-model="paymentReference">
+      </label>
+       <label class="item item-input">
+      <input type="text" placeholder="Please enter your description here" ng-model="dataObj.remittanceInfo">
+      </label>
+     </div>
+     <div class="item card" type="item-text-wrap">
+            <label class="item item-input">
+            <i class="icon ion-calendar placeholder-icon"></i>
+                   <input class="" type="date" placeholder="Execution Date" ng-model="dataObj.date"> 
+                   </label>
+     </div>
+
+      <a nav-transition="none" class='button button-block amber' ng-click="validate(dataObj)">Transfer</a> 
+  </ion-content>
+</ion-view>
