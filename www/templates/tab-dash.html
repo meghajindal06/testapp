@@ -33,6 +33,7 @@
       </label>
      </div>
      <div class="item card" type="item-text-wrap">
+      <span class="error" ng-show="errors.executionDate">{{errors.executionDate}}</span>
             <label class="item item-input">
             <i class="icon ion-calendar placeholder-icon"></i>
                    <input class="" type="date" placeholder="Execution Date" ng-model="dataObj.date"> 
